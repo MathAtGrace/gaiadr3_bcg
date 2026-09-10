@@ -40,7 +40,7 @@ class BolometryTable:
 			data_dir = resource_filename('gdr3bcg','data')
 			file=os.path.join(data_dir, 'bc_dr3_feh_all.dat')
 
-		table=pd.read_table(file, delim_whitespace=True, names=["teff", "logg","metal","alpha","bc"],dtype={'teff':np.float64,'logg':np.float64,'metal':np.float64,'alpha':np.float64,'bc':np.float64})
+		table=pd.read_table(file, sep=r"\s+", names=["teff", "logg","metal","alpha","bc"],dtype={'teff':np.float64,'logg':np.float64,'metal':np.float64,'alpha':np.float64,'bc':np.float64})
 		self.__bolometry=table.sort_values(by=['teff', 'logg','metal','alpha'])
 		self.__param=self.__bolometry.values[:,0:4]
 		self.__bc=self.__bolometry.values[:,4]

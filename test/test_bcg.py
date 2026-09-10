@@ -65,7 +65,7 @@ class TestBcg(unittest.TestCase):
 	def test_random(self):
 		print('test java vs python on random parameters')
 		file=os.path.join(self.__data_test, 'bcgran.dat')
-		table=pd.read_table(file, delim_whitespace=True, names=["teff", "logg","metal","alpha","bc"],dtype={'teff':np.float64,'logg':np.float64,'metal':np.float64,'alpha':np.float64,'bc':np.float64})
+		table=pd.read_table(file, sep=r"\s+", names=["teff", "logg","metal","alpha","bc"],dtype={'teff':np.float64,'logg':np.float64,'metal':np.float64,'alpha':np.float64,'bc':np.float64})
 		params=table.values[:,0:4]
 		expected=table.values[:,4]
 		
