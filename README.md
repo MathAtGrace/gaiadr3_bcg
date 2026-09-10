@@ -5,6 +5,15 @@ This function takes as input the effective temperature Teff, surface gravity log
 
 ## To get the project, use the git repository : 
 * git clone https://gitlab.oca.eu/ordenovic/gaiadr3_bcg
+* in the terminal, navigate to where you saved it locally
+    * In windows, 
+```bash
+  cd path\to\your\project
+```
+    * In linux or mac,
+```bash
+  cd path/to/your/project
+```
 
 ## you will find :
 * the directory (package) gdr3bgc with the python class : bcg.py
@@ -13,28 +22,53 @@ This function takes as input the effective temperature Teff, surface gravity log
 * a setup file for package installation
 
 ## installation
-* use python 3.6(+) and setuptools library
-* run python3 setup.py install for package installation
+* use python 3.6(+) and install from the requirments folder
+```bash
+  pip install -r requirements.txt
+```
+* install the package by running the code
+```bash
+python setup.py install
+```
 
 ## The directory data contains the main bc table used for the DR3 : 
 * bc_dr3_feh_all.dat
 
 ## You can run the unit test file by the command:
-* python3 setup.py test
+```bash
+python setup.py test
+```
 
 ## The demo can be run by:
-* python3 demo.py
+```bash
+python demo.py
+```
 
 ## To use it directly in your python code:
-* import the python file bcg.py by the command : import gdr3bcg.bcg as bcg
-* create the object by calling the constructor: table=bcg.BolometryTable()
-* call the method : table.computeBc(point <,offset>)
+* import the python file bcg.py by the command :
+```python
+import gdr3bcg.bcg as bcg
+```
+* create the object by calling the constructor:
+```python
+table=bcg.BolometryTable()
+```
+* call the method :
+```python
+table.computeBc(point [offset])
+```
     * point is a list of 4 elements : [teff, logg, metallicity, alpha/Fe]
     * offset is an optional floating value (0 by default), see below for details.
 
 ## To run the script directly from the command line
-* python3 bcg.py teff logg [Fe/H] [alpha/Fe]  e.g. python3 bcg.py 2555 5 -0.5 0.2  (answer -2.000)
-* or to adjust the bolometric correction zeropoint: python3 bcg.py 2555 5 -0.5 0.2 0.02 (answer -1.980)
+* `python bcg.py teff logg [Fe/H] [alpha/Fe]`  e.g.
+```bash
+python bcg.py 2555 5 -0.5 0.2  (answer -2.000)
+```
+* or to adjust the bolometric correction zeropoint:
+```bash
+python bcg.py 2555 5 -0.5 0.2 0.02 (answer -1.980)
+```
 
 ## Acknowledgements
 When using this function we ask you to cite Creevey, O. L., Sordo, R., Pailler F., et al. 2022, A&A, "Gaia Data Release 3: Astrophysical parameters inference system (Apsis) I - overview"
