@@ -7,13 +7,13 @@ This function takes as input the effective temperature Teff, surface gravity log
 * git clone https://gitlab.oca.eu/ordenovic/gaiadr3_bcg
 * in the terminal, navigate to where you saved it locally
     * In windows, 
-```bash
-  cd path\to\your\project
-```
+      ```bash
+        cd path\to\your\project
+      ```
     * In linux or mac,
-```bash
-  cd path/to/your/project
-```
+         ```bash
+           cd path/to/your/project
+         ```
 
 ## you will find :
 * the directory (package) gdr3bgc with the python class : bcg.py
