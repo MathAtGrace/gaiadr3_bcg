@@ -1,6 +1,8 @@
 # Gaiadr3 Bcg
 
 ## Description
+This is a fork from https://gitlab.oca.eu/ordenovic/gaiadr3_bcg with slight changes to make it work with `pandas >= 3.0.0`.  Everthing below is from them, except for slight changes to setup instructions to make them more clear for Grace College students.
+
 This function takes as input the effective temperature Teff, surface gravity log g, iron abundance [Fe/H], and alpha-enhancement [alpha/Fe] values of a star, and returns the model bolometric correction in G-band (BC_G), using the Gaia EDR3 passbands, for that combination of parameters. The value of BC_G is based on the assumption of that the absolute magnitude of the Sun in this G-band, MG_Sun, is 4.66 mag, i.e. BC_G,Sun = +0.08 mag, see Creevey et al. (2022) for details. A user can specify an offset (in magnitudes) to this reference zeropoint directly in the function.
 
 ## To get the project, use the git repository : 
