@@ -45,7 +45,7 @@ python demo.py
 ```
 
 ## To use it directly in your python code:
-* import the python file bcg.py by the command :
+* in a python environment, import the python file bcg.py by the command :
 ```python
 import gdr3bcg.bcg as bcg
 ```
