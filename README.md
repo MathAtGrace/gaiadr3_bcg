@@ -62,14 +62,16 @@ table.computeBc(point [offset])
 
 ## To run the script directly from the command line
 * `python bcg.py teff logg [Fe/H] [alpha/Fe]`  e.g.
-```bash
-python bcg.py 2555 5 -0.5 0.2  (answer -2.000)
-```
+  ```bash
+  python bcg.py 2555 5 -0.5 0.2
+  ```
+  (answer -2.000)
 * or to adjust the bolometric correction zeropoint:
-```bash
-python bcg.py 2555 5 -0.5 0.2 0.02 (answer -1.980)
-```
-
+  ```bash
+  python bcg.py 2555 5 -0.5 0.2 0.02 
+  ```
+  (answer -1.980)
+  
 ## Acknowledgements
 When using this function we ask you to cite Creevey, O. L., Sordo, R., Pailler F., et al. 2022, A&A, "Gaia Data Release 3: Astrophysical parameters inference system (Apsis) I - overview"
 
