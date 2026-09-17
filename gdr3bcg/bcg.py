@@ -33,6 +33,8 @@ class BolometryTable:
     	
 	"""
 	   constructor. Take as argument the ascii table file.
+
+	   connects files of the project together, specifically the bolometry table file.
 	"""
 	def __init__(self,file=None):
 		
@@ -56,6 +58,8 @@ class BolometryTable:
            the value is shifted by '0.2', which is an offset applied for DR3
            This implies that the absolute magnitude if the sun in G band is equals 4.66 mag
            see : creevey et al, 2022, sect 4,3
+
+		value, interpolate, and nearest index are used
 	"""
 	def computeBc(self,value,offset=0):
 
@@ -68,6 +72,8 @@ class BolometryTable:
 				
 	"""
 	   find the index location of pouint g (array) by dichotomy
+
+	   uses "dichotomic search" which is a search that chooses between two alternatives at each step
 	"""
 	def where(self,g):
 		bas=0
@@ -134,6 +140,8 @@ class BolometryTable:
 		
 	"""
        find the nearest (predecessor) point
+
+	   trying to figure out what this means
     """
 	def nearestIndex(self,value):
 		delta=[100,1,1,1]
@@ -216,6 +224,8 @@ class BolometryTable:
 		
 	"""
 	   performs a quick interpolation into the grid
+
+	   interpolate is defined, and is used to do something with positions and indexing.
 	"""
 	def interpolate(self,value):
 		
@@ -244,6 +254,8 @@ class BolometryTable:
 		nElems = 2**nParams
 		coeff=np.zeros((nElems,nParams), dtype = int)
 		v={}	
+		
+		# empty lists 
 		hypercubeNodes=[]
 		hypercubeBc=[]
 		
